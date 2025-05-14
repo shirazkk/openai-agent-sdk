@@ -1,0 +1,13 @@
+
+    digraph G {
+        graph [splines=true];
+        node [fontname="Arial"];
+        edge [penwidth=1.5];
+    "__start__" [label="__start__", shape=ellipse, style=filled, fillcolor=lightblue, width=0.5, height=0.3];"__end__" [label="__end__", shape=ellipse, style=filled, fillcolor=lightblue, width=0.5, height=0.3];"panacloud_agent" [label="panacloud_agent", shape=box, style=filled, fillcolor=lightyellow, width=1.5, height=0.8];"web_dev" [label="web_dev", shape=box, style=filled, style=rounded, fillcolor=lightyellow, width=1.5, height=0.8];"__start__" [label="__start__", shape=ellipse, style=filled, fillcolor=lightblue, width=0.5, height=0.3];"__end__" [label="__end__", shape=ellipse, style=filled, fillcolor=lightblue, width=0.5, height=0.3];"web_dev" [label="web_dev", shape=box, style=filled, fillcolor=lightyellow, width=1.5, height=0.8];"app_dev" [label="app_dev", shape=box, style=filled, style=rounded, fillcolor=lightyellow, width=1.5, height=0.8];"__start__" [label="__start__", shape=ellipse, style=filled, fillcolor=lightblue, width=0.5, height=0.3];"__end__" [label="__end__", shape=ellipse, style=filled, fillcolor=lightblue, width=0.5, height=0.3];"app_dev" [label="app_dev", shape=box, style=filled, fillcolor=lightyellow, width=1.5, height=0.8];"agentic_ai" [label="agentic_ai", shape=box, style=filled, style=rounded, fillcolor=lightyellow, width=1.5, height=0.8];"__start__" [label="__start__", shape=ellipse, style=filled, fillcolor=lightblue, width=0.5, height=0.3];"__end__" [label="__end__", shape=ellipse, style=filled, fillcolor=lightblue, width=0.5, height=0.3];"agentic_ai" [label="agentic_ai", shape=box, style=filled, fillcolor=lightyellow, width=1.5, height=0.8];"backend_dev_tool" [label="backend_dev_tool", shape=ellipse, style=filled, fillcolor=lightgreen, width=0.5, height=0.3];"dev_ops_tool" [label="dev_ops_tool", shape=ellipse, style=filled, fillcolor=lightgreen, width=0.5, height=0.3];"__start__" -> "panacloud_agent";
+            "panacloud_agent" -> "web_dev";"web_dev" -> "__end__";
+            "panacloud_agent" -> "app_dev";"app_dev" -> "__end__";
+            "panacloud_agent" -> "agentic_ai";
+        "agentic_ai" -> "backend_dev_tool" [style=dotted, penwidth=1.5];
+        "backend_dev_tool" -> "agentic_ai" [style=dotted, penwidth=1.5];
+        "agentic_ai" -> "dev_ops_tool" [style=dotted, penwidth=1.5];
+        "dev_ops_tool" -> "agentic_ai" [style=dotted, penwidth=1.5];"agentic_ai" -> "__end__";}
