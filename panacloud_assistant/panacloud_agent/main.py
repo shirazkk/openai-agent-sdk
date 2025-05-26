@@ -80,7 +80,7 @@ panacloud_agent:Agent = Agent(
 )
 
 
-draw_graph(panacloud_agent, filename="agent_graph")
+# draw_graph(panacloud_agent, filename="agent_graph")
 
 
 # enable_verbose_stdout_logging()
